@@ -242,18 +242,20 @@ img {
 
 /*========= top ===============*/
 .top{
-    margin: 150px 0 100px 0;
+    // margin: 100px 0 100px 0;
     position: relative;
+    margin-top: 70px;
 
 
     &__Text{
         position: absolute;
         font-size: 24px;
         font-weight: bold;
-        margin-top: 100px;
+        margin-top: 40px;
         padding-left: 6vw;
         text-transform: uppercase;
         margin-bottom: 10px;
+        color: $white-color;
 
         & p{
             margin-bottom: 10px;
@@ -261,12 +263,15 @@ img {
     }
 
     &__img{
-        width: 80vw;
-        height: 500px;
-        // object-fit: cover;
-        right: 0;
         margin-left: auto;
         z-index: -1;
+
+        & img{
+            width: 100vw;
+            height: 80vh;
+            object-fit: cover;
+        }
+
 
     }
 }
@@ -293,6 +298,7 @@ section{
     }
     &__title{
         font-size: 21px;
+        font-weight: 600;
     }
     &__cap__j,
     &__cap__e{

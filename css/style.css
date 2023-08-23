@@ -211,27 +211,31 @@ img {
 
 /*========= top ===============*/
 .top {
-  margin: 150px 0 100px 0;
   position: relative;
+  margin-top: 70px;
 }
 .top__Text {
   position: absolute;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 40px;
   padding-left: 6vw;
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: #f8f8f8;
 }
 .top__Text p {
   margin-bottom: 10px;
 }
 .top__img {
-  width: 80vw;
-  height: 500px;
-  right: 0;
   margin-left: auto;
   z-index: -1;
+}
+.top__img img {
+  width: 100vw;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*========= section ===============*/
@@ -252,6 +256,7 @@ section {
 }
 .about__title {
   font-size: 21px;
+  font-weight: 600;
 }
 .about__cap__j, .about__cap__e {
   font-size: 16px;
