@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity Selects</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'qfo8qmw',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,18 +44,16 @@
 
     <header>
 
-        <div class="logo">
-            <h1>Serenity Selects</h1>
-        </div>
-
-        <div class="gnav__menu">
-            <div class="openbtn-box">
-                <p>Menu</p>
-                <div class="openbtn"><span></span><span></span></div>
+        <!-- <div class="gnav__fix__box">
+            <div class="logo">
+                <h1>Serenity Selects</h1>
             </div>
-            <nav id="gnav">
-                <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-                <div id="gnav__list">
+            <div class="gnav__menu">
+                <div class="openbtn-box">
+                    <p>Menu</p>
+                    <div class="openbtn"><span></span><span></span></div>
+                </div>
+                <nav id="g-nav">
                     <h1>Serenity Selects</h1>
                     <ul>
                         <li><a href="#">HOME</a></li>
@@ -37,15 +66,18 @@
                         <li><a href="#">Latest news</a></li>
                         <li><a href="#">Follow Us</a></li>
                     </ul>
-                </div>
-            </nav>
-        </div>
+                </nav>
+            </div>
+            <div class="circle-bg"></div>
+        </div> -->
+
 
         <div class="top">
             <div class="top__Text">
                 <p>We give you</p>
                 <p>the gift of</p>
-                <p>peace and serenity</p>
+                <p>peace and</p>
+                <p>serenity.</p>
             </div>
             <div class="top__img"><img src="img/top.jpg" alt=""></div>
         </div>
@@ -54,23 +86,25 @@
     <main>
 
         <section class="about">
-            <p class="about__title">心の癒しとくつろぎを贈る</p>
-            <p class="about__cap__j">
-                心地よい香りと心癒される光に包まれた空間で、
-                心のリラックスを追求するセレクトショップです。
-                自分自身や、大切な方への贈り物に、
-                風に吹かれるほどの気軽さで ふらっとお立ち寄りください。
-            </p>
-            <p class="about__cap__e">
-                We are a select store that pursues relaxation of the mind
-                in a space surrounded by pleasant fragrances and soothing light.
-                Please stop by with the ease of a breeze to buy a gift
-                for yourself or a loved one.
-            </p>
-            <button class="about__btn">About</button>
+            <div class="about__cap__box">
+                <p class="about__title">心の癒しとくつろぎを贈る</p>
+                <p class="about__cap__j">
+                    心地よい香りと心癒される光に包まれた空間で、
+                    心のリラックスを追求するセレクトショップです。
+                    自分自身や、大切な方への贈り物に、
+                    風に吹かれるほどの気軽さで ふらっとお立ち寄りください。
+                </p>
+                <p class="about__cap__e">
+                    We are a select store that pursues relaxation of the mind
+                    in a space surrounded by pleasant fragrances and soothing light.
+                    Please stop by with the ease of a breeze to buy a gift
+                    for yourself or a loved one.
+                </p>
+                <button class="about__btn">About</button>
+            </div>
         </section>
 
-        <section class="goods">
+        <section class="goods wrapper">
             <h2 class="goods__title">Serenity Selects Goods</h2>
 
             <div class="goodsItem">
@@ -118,9 +152,25 @@
 
         <section class="newItem">
 
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
         </section>
 
-        <section class="column">
+        <section class="column wrapper">
             <h2 class="column__title">Column</h2>
 
             <div class="columnItem">
@@ -130,13 +180,13 @@
                     <figcaption class="columnItem__text">デジタル世界の情報過多や常につながっている状態が引き起こすストレスや不安について取り上げ、デジタルデトックスの方法やその効果について探求します。</figcaption>
                 </figure>
                 <figure class="columnItem__box">
-                    <img src="img/colmn-01.jpg" alt="">
+                    <img src="img/colmn-02.jpg" alt="">
                     <h3 class="columnItem__title">デジタル世界の情報過多や常につながっている状態が引き起こすストレスや不安について取り上げ、デジタルデトックスの方法やその効果について探求します。</h3>
                     <figcaption class="columnItem__text">自己肯定感の重要性や自己評価の仕組みについて解説し、自己肯定感を高めるための具体的なステップやツールについて紹介します。
                     </figcaption>
                 </figure>
                 <figure class="columnItem__box">
-                    <img src="img/colmn-01.jpg" alt="">
+                    <img src="img/colmn-03.jpg" alt="">
                     <h3 class="columnItem__title">ストレスからの解放: マインドフルネスの実践方法</h3>
                     <figcaption class="columnItem__text">ストレスの原因や影響について説明し、マインドフルネス瞑想の実践方法やその効果について解説します。ストレス軽減や心のリラックスに役立つ具体的なテクニックも紹介します。</figcaption>
                 </figure>
@@ -145,7 +195,7 @@
             <button class="column__btn">View more &gt;&gt;</button>
         </section>
 
-        <section class="inst">
+        <section class="inst wrapper">
             <h2 class="inst__title">Instagram</h2>
             <div class="inst__img__box">
                 <img src="img/inst-01.jpg" alt="">
@@ -157,7 +207,7 @@
             </div>
         </section>
 
-        <section class="latestNews">
+        <section class="latestNews wrapper">
             <h2 class="latestNews">Latest news</h2>
             <dl>
                 <dt>12/15</dt>
@@ -169,7 +219,7 @@
 
     </main>
 
-    <footer>
+    <footer class="wrapper">
         <h2 class="footer__title">Serenity Selects</h2>
         <dl>
             <dt>open</dt>
@@ -200,6 +250,8 @@
 
     <!-- nav -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!--自作のJS-->
     <script src="js/script.js"></script>
 </body>

@@ -18,7 +18,7 @@ $accent:#9aa4af;
 //共通部分---------------------------
 
 body {
-    font-family: "garamond-premier-pro", "fot-tsukuaoldmin-pr6n", sans-serif;
+    font-family: komet, dnp-shuei-gothic-gin-std, sans-serif;
     color: $black-color;
     background: $white-color;
     line-height: 1.5;
@@ -45,9 +45,9 @@ img {
 }
 
 .wrapper {
-    max-width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
-    // padding: 0 4%;
+    padding: 0 6vw;
 }
 
 .flex {
@@ -58,33 +58,37 @@ img {
 
 /*========= ナビゲーションのためのCSS ===============*/
 
-#g-nav{
+#g-nav {
     /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
-    position:fixed;
-	z-index: -1;
-	opacity: 0;/*はじめは透過0*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
     /*ナビの位置と形状*/
-	top:0;
-	width:100%;
-    height: 100vh;/*ナビの高さ*/
-	background:#999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: $white-color;
     /*動き*/
-	transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
-#g-nav.panelactive{
-	opacity: 1;
-	z-index:999;
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
 }
 
 /*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
+#g-nav.panelactive #g-nav-list {
     /*ナビの数が増えた場合縦スクロール*/
     position: fixed;
-    z-index: 999; 
+    z-index: 999;
     width: 100%;
-    height: 100vh;/*表示する高さ*/
+    height: 100vh;
+    /*表示する高さ*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,9 +99,9 @@ img {
     /*ナビゲーション天地中央揃え*/
     position: absolute;
     z-index: 999;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #g-nav.panelactive ul {
@@ -106,70 +110,197 @@ img {
 
 /*リストのレイアウト設定*/
 
-#g-nav li{
-	list-style: none;
-    text-align: center; 
+#g-nav li {
+    list-style: none;
+    text-align: center;
 }
 
-#g-nav li a{
-	color: #333;
-	text-decoration: none;
-	padding:10px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: bold;
+#g-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
 }
 
 /*========= ボタンのためのCSS ===============*/
-.openbtn{
-	position:fixed;
-    z-index: 9999;/*ボタンを最前面に*/
-	top:10px;
-	right: 10px;
-	cursor: pointer;
+.openbtn {
+    position:fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top:10px;
+    right: 6vw;
+    cursor: pointer;
     width: 50px;
-    height:50px;
+    height: 50px;
+    // position: relative;
 }
-	
-/*×に変化*/	
-.openbtn span{
+
+/*×に変化*/
+.openbtn span {
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-	background-color: #666;
-  	width: 45%;
-  }
+    left: 5px;
+    height: 2px;
+    // border-radius: 2px;
+    background-color: $black-color;
+    width: 80%;
+}
 
 .openbtn span:nth-of-type(1) {
-	top:15px;	
+    top: 15px;
 }
 
 .openbtn span:nth-of-type(2) {
-	top:23px;
-}
-
-.openbtn span:nth-of-type(3) {
-	top:31px;
+    top: 31px;
 }
 
 .openbtn.active span:nth-of-type(1) {
     top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+    left: 7px;
+    transform: translateY(6px) rotate(-30deg);
+    width: 80%;
 }
 
 .openbtn.active span:nth-of-type(2) {
-	opacity: 0;
+    top: 30px;
+    left: 7px;
+    transform: translateY(-6px) rotate(30deg);
+    width: 80%;
 }
 
-.openbtn.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+/*========= swiperのためのCSS ===============*/
+
+.swiper {
+    width: 100%;
+    height: 600px;
+    z-index: -1;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: $black-color;
+}
+
+
+
+/*========= header ===============*/
+.gnav__fix__box {
+    padding: 0 6vw;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white-color;
+    z-index: 999;
+    
+    & h1 {
+        font-size: 24px;
+    }
+}
+
+.openbtn-box {
+
+    @include pc {
+        display: flex;
+        align-items: center;
+    }
+
+
+    & p {
+        display: none;
+
+        @include pc {
+            display: block;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+    }
+}
+
+/*========= top ===============*/
+.top{
+    margin: 150px 0 100px 0;
+    position: relative;
+
+
+    &__Text{
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 100px;
+        padding-left: 6vw;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        & p{
+            margin-bottom: 10px;
+        }
+    }
+
+    &__img{
+        width: 80vw;
+        height: 500px;
+        // object-fit: cover;
+        right: 0;
+        margin-left: auto;
+        z-index: -1;
+
+    }
+}
+
+
+/*========= section ===============*/
+
+section{
+    margin-bottom: 150px;
+}
+
+
+/*========= about ===============*/
+
+.about{
+
+    background-image: url(../img/about.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding: 100px 0;
+
+    &__cap__box{
+        padding: 0 6vw;
+    }
+    &__title{
+        font-size: 21px;
+    }
+    &__cap__j,
+    &__cap__e{
+        font-size: 16px;
+    }
+    &__title,
+    &__cap__j{
+        margin-bottom: 50px;
+    }
+
 }
