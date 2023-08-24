@@ -3,7 +3,7 @@ body {
   font-family: komet, dnp-shuei-gothic-gin-std, sans-serif;
   color: #212529;
   background: #f8f8f8;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.07em;
   font-weight: normal;
 }
@@ -25,8 +25,9 @@ img {
 }
 
 .wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 6vw;
 }
 
@@ -240,7 +241,7 @@ img {
 
 /*========= section ===============*/
 section {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 /*========= about ===============*/
@@ -261,7 +262,41 @@ section {
 .about__cap__j, .about__cap__e {
   font-size: 16px;
 }
-.about__title, .about__cap__j {
+.about__title, .about__cap__j, .about__cap__e {
   margin-bottom: 50px;
+}
+.about__btn {
+  font-size: 16px;
+}
+.about__btn a {
+  display: inline-block;
+  background-color: #f8f8f8;
+  padding: 5px 35px;
+  border-radius: 18px;
+}
+.about__btn a:hover {
+  background-color: #212529;
+  color: #f8f8f8;
+}
+
+/*========= goods ===============*/
+.goods__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.goodsItem {
+  margin-bottom: 80px;
+}
+.goodsItem__title {
+  font-size: 28px;
+}
+.goodsItem__cap dt {
+  font-size: 18px;
+  font-weight: 600;
+}
+.goodsItem__cap dd {
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

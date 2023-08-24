@@ -21,7 +21,7 @@ body {
     font-family: komet, dnp-shuei-gothic-gin-std, sans-serif;
     color: $black-color;
     background: $white-color;
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: 0.07em;
     font-weight: normal;
 
@@ -45,8 +45,9 @@ img {
 }
 
 .wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 6vw;
 }
 
@@ -127,10 +128,10 @@ img {
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
-    position:fixed;
+    position: fixed;
     z-index: 9999;
     /*ボタンを最前面に*/
-    top:10px;
+    top: 10px;
     right: 6vw;
     cursor: pointer;
     width: 50px;
@@ -215,7 +216,7 @@ img {
     justify-content: space-between;
     background-color: $white-color;
     z-index: 999;
-    
+
     & h1 {
         font-size: 24px;
     }
@@ -241,13 +242,13 @@ img {
 }
 
 /*========= top ===============*/
-.top{
+.top {
     // margin: 100px 0 100px 0;
     position: relative;
     margin-top: 70px;
 
 
-    &__Text{
+    &__Text {
         position: absolute;
         font-size: 24px;
         font-weight: bold;
@@ -257,16 +258,16 @@ img {
         margin-bottom: 10px;
         color: $white-color;
 
-        & p{
+        & p {
             margin-bottom: 10px;
         }
     }
 
-    &__img{
+    &__img {
         margin-left: auto;
         z-index: -1;
 
-        & img{
+        & img {
             width: 100vw;
             height: 80vh;
             object-fit: cover;
@@ -279,34 +280,89 @@ img {
 
 /*========= section ===============*/
 
-section{
-    margin-bottom: 150px;
+section {
+    margin-bottom: 100px;
 }
 
 
 /*========= about ===============*/
 
-.about{
+.about {
 
     background-image: url(../img/about.jpg);
     background-repeat: no-repeat;
     object-fit: cover;
     padding: 100px 0;
 
-    &__cap__box{
+    &__cap__box {
         padding: 0 6vw;
     }
-    &__title{
+
+    &__title {
         font-size: 21px;
         font-weight: 600;
     }
+
     &__cap__j,
-    &__cap__e{
+    &__cap__e {
         font-size: 16px;
     }
+
     &__title,
-    &__cap__j{
+    &__cap__j,
+    &__cap__e {
         margin-bottom: 50px;
     }
 
+    &__btn {
+        font-size: 16px;
+
+        & a {
+            display: inline-block;
+            background-color: $white-color;
+            padding: 5px 35px;
+            border-radius: 18px;
+
+            &:hover {
+                background-color: $black-color;
+                color: $white-color;
+            }
+
+        }
+    }
+
+}
+
+
+/*========= goods ===============*/
+
+
+.goods {
+
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &Item {
+        margin-bottom: 80px;
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__cap {
+
+            & dt {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            & dd {
+                font-size: 14px;
+            }
+        }
+    }
 }
