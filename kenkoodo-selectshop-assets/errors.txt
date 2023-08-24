@@ -1,2 +1,0 @@
-[2023-8-23 22:03:24] layer "xxx-xxxx-xxxx kenkodo.select@xxx.xx": Unsupported extension: xx
-[2023-8-23 22:03:32] layer "xxx-xxxx-xxxx kenkodo.select@xxx.xx": Unsupported extension: xx
