@@ -270,14 +270,12 @@ section {
 }
 .about__btn {
   font-size: 16px;
-}
-.about__btn a {
   display: inline-block;
   background-color: #f8f8f8;
   padding: 5px 35px;
   border-radius: 18px;
 }
-.about__btn a:hover {
+.about__btn:hover {
   background-color: #212529;
   color: #f8f8f8;
 }
@@ -311,15 +309,14 @@ section {
   margin-bottom: 20px;
 }
 .goodsItem__btn {
-  margin-left: auto;
-  margin-right: auto;
-}
-.goodsItem__btn a {
+  text-align: center;
   margin-bottom: 20px;
   display: inline-block;
   padding: 5px 0;
   border: 2px solid #9aa4af;
-  font-size: 14px;
+  font-size: 18px;
   width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=style.css.map */
