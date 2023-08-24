@@ -241,19 +241,22 @@ img {
 
 /*========= section ===============*/
 section {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  width: 100%;
 }
 
 /*========= about ===============*/
 .about {
   background-image: url(../img/about.jpg);
   background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 100px 0;
+  background-size: cover;
+  padding: 80px 0;
 }
 .about__cap__box {
   padding: 0 6vw;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about__title {
   font-size: 21px;
@@ -281,22 +284,42 @@ section {
 
 /*========= goods ===============*/
 .goods__title {
-  font-size: 24px;
+  font-size: 26px;
   text-transform: uppercase;
   margin-bottom: 50px;
   text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0;
+  border: 2px solid #212529;
 }
 .goodsItem {
   margin-bottom: 80px;
 }
 .goodsItem__title {
-  font-size: 28px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 .goodsItem__cap dt {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .goodsItem__cap dd {
   font-size: 14px;
+  margin-bottom: 20px;
+}
+.goodsItem__btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+.goodsItem__btn a {
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 5px 0;
+  border: 2px solid #9aa4af;
+  font-size: 14px;
+  width: 250px;
 }
 /*# sourceMappingURL=style.css.map */
