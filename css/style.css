@@ -39,7 +39,6 @@ img {
 #g-nav {
   /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
   position: fixed;
-  z-index: -1;
   opacity: 0;
   /*はじめは透過0*/
   /*ナビの位置と形状*/
@@ -51,12 +50,14 @@ img {
   background: #f8f8f8;
   /*動き*/
   transition: all 0.3s;
+  display: none;
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
 #g-nav.panelactive {
   opacity: 1;
   z-index: 999;
+  display: block;
 }
 
 /*ナビゲーションの縦スクロール*/
