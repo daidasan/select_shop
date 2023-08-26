@@ -28,7 +28,7 @@ img {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 6vw;
+  padding: 0 8vw;
 }
 
 .flex {
@@ -109,7 +109,7 @@ img {
   z-index: 9999;
   /*ボタンを最前面に*/
   top: 10px;
-  right: 6vw;
+  right: 8vw;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -179,7 +179,7 @@ img {
 
 /*========= header ===============*/
 .gnav__fix__box {
-  padding: 0 6vw;
+  padding: 0 8vw;
   height: 70px;
   width: 100%;
   position: fixed;
@@ -221,7 +221,7 @@ img {
   font-size: 24px;
   font-weight: bold;
   margin-top: 40px;
-  padding-left: 6vw;
+  padding-left: 8vw;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #f8f8f8;
@@ -254,7 +254,7 @@ section {
   padding: 80px 0;
 }
 .about__cap__box {
-  padding: 0 6vw;
+  padding: 0 8vw;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -297,27 +297,40 @@ section {
 }
 .goodsItem__title {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 1.2;
 }
 .goodsItem__cap dt {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .goodsItem__cap dd {
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .goodsItem__btn {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+.goodsItem__btn a {
   display: inline-block;
   padding: 5px 0;
-  border: 2px solid #212529;
-  font-size: 18px;
+  border: 1px solid #212529;
+  font-size: 14px;
   width: 250px;
-  margin-left: auto;
-  margin-right: auto;
 }
+.goodsItem__img__box {
+  display: flex;
+  justify-content: space-between;
+}
+.goodsItem__img__box img {
+  width: 40vw;
+  height: 100%;
+}
+.goodsItem__img__box .under {
+  margin-top: 30px;
+}
+
+/*========= column ===============*/
 /*# sourceMappingURL=style.css.map */
