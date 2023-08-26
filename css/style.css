@@ -333,4 +333,49 @@ section {
 }
 
 /*========= column ===============*/
+.column__cotainer {
+  padding: 50px 8vw;
+  border: 2px solid #9aa4af;
+}
+.column__title {
+  font-size: 36px;
+  text-align: center;
+  color: #9aa4af;
+  margin-bottom: 30px;
+}
+.columnItem__box {
+  margin-bottom: 50px;
+}
+.columnItem__box img {
+  margin-bottom: 20px;
+}
+.columnItem__box h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #212529;
+}
+.column__btn {
+  text-align: center;
+}
+
+/*========= inst ===============*/
+.inst__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.inst .swiper {
+  /*スライダーの幅と高さを調整*/
+  width: 100%;
+  height: 150px;
+  margin: 0.5rem auto;
+}
+.inst .swiper-slide {
+  /*スライド要素の幅と高さを調整*/
+  width: 100%;
+  height: 100%;
+}
+.inst .swiper-wrapper {
+  transition-timing-function: linear;
+}
 /*# sourceMappingURL=style.css.map */

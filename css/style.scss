@@ -409,5 +409,64 @@ section {
 /*========= column ===============*/
 
 .column {
-    // padding: 0 8vw;
+
+    &__cotainer {
+        padding: 50px 8vw;
+        border: 2px solid $accent;
+    }
+
+    &__title {
+        font-size: 36px;
+        text-align: center;
+        color: $accent;
+        margin-bottom: 30px;
+    }
+
+    &Item {
+
+        &__box {
+            margin-bottom: 50px;
+
+            & img {
+                margin-bottom: 20px;
+            }
+
+            & h3 {
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $black-color;
+            }
+        }
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}
+
+/*========= inst ===============*/
+.inst {
+
+    &__title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    & .swiper {
+        /*スライダーの幅と高さを調整*/
+        width: 100%;
+        height: 150px;
+        margin: 0.5rem auto;
+
+        &-slide {
+            /*スライド要素の幅と高さを調整*/
+            width: 100%;
+            height: 100%;
+        }
+
+        &-wrapper {
+            transition-timing-function: linear;
+        }
+    }
 }
