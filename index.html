@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="top">
 
     <header>
 
@@ -54,18 +54,19 @@
                     <div class="openbtn"><span></span><span></span></div>
                 </div>
                 <nav id="g-nav">
-                    <h2>Serenity Selects</h2>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Goods</a></li>
-                        <li><a href="#">&gt; Fragrance/Candle</a></li>
-                        <li><a href="#">&gt; Drink</a></li>
-                        <li><a href="#">&gt; Book/Music</a></li>
-                        <li><a href="#">&gt; Book/Music</a></li>
-                        <li><a href="#">Latest news</a></li>
-                        <li><a href="#">Follow Us</a></li>
-                    </ul>
+                    <div class="g-nav__box">
+                        <h2>Serenity<br>Selects</h2>
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Goods</a></li>
+                            <li><a href="#">&gt; Fragrance/Candle</a></li>
+                            <li><a href="#">&gt; Drink</a></li>
+                            <li><a href="#">&gt; Book/Music</a></li>
+                            <li><a href="#">Latest news</a></li>
+                            <li><a href="#">Follow Us</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
             <div class="circle-bg"></div>
@@ -154,18 +155,33 @@
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">
+                        <div class="wrapper newItem__box">
+                            <h3><time datetime="2023-07-12">07/12</time><br>NEW ITEM</h3>
+                            <div class="newItem__btn"><a href="#">Fragrance</a><a href="#"><a href="#">Fragrance</a></a></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="wrapper newItem__box">
+                            <h3><time datetime="2023-07-12">07/12</time><br>NEW ITEM</h3>
+                            <div class="newItem__btn"><a href="#">Fragrance</a><a href="#"><a href="#">Fragrance</a></a></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="wrapper newItem__box">
+                            <h3><time datetime="2023-07-12">07/12</time><br>NEW ITEM</h3>
+                            <div class="newItem__btn"><a href="#">Fragrance</a><a href="#"><a href="#">Fragrance</a></a></div>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <div class="swiper-pagination"></div>
+
             </div>
 
         </section>
@@ -242,33 +258,40 @@
 
     </main>
 
-    <footer class="wrapper">
-        <h2 class="footer__title">Serenity Selects</h2>
-        <dl>
-            <dt>open</dt>
-            <dd>10:00ー19:00</dd>
-            <dt>close</dt>
-            <dd>木曜日</dd>
-        </dl>
-        <div class="footerItem__box">
-            <div class="footerItem">
-                <h3 class="footerItem__title">
-                    Location
-                </h3>
-                <p>広島市中区本川町0-0-00</p>
-                <p>〇〇ビル　2階</p>
+    <footer class="footer">
+        <div class="footer__container wrapper">
+            <h2 class="footer__title">Serenity Selects</h2>
+            <div class="footer__cap">
+                <dl>
+                    <dt>open</dt>
+                    <dd>10:00ー19:00</dd>
+                </dl>
+                <dl>
+                    <dt>close</dt>
+                    <dd>木曜日</dd>
+                </dl>
             </div>
-
-            <div class="footerItem">
-                <h3 class="footerItem__title">
-                    Contact
-                </h3>
-                <p>xxx-xxxx-xxxx</p>
-                <p>kenkodo.select@xxx.xx</p>
+            <div class="footerItem__box">
+                <div class="footerItem">
+                    <h3 class="footerItem__title">
+                        Location
+                    </h3>
+                    <p>広島市中区本川町0-0-00</p>
+                    <p>〇〇ビル　2階</p>
+                </div>
+                <div class="footerItem">
+                    <h3 class="footerItem__title">
+                        Contact
+                    </h3>
+                    <p>000-0000-0000</p>
+                    <p>serenity.selects@xxx.xx</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="small__box"><small>©2023 Serenity Selects</small></div>
+                <div class="topLink"><a href="#top">TOP</a></div>
             </div>
         </div>
-
-        <div class="topLink"><a href="index.html">top</a></div>
     </footer>
 
     <!-- nav -->

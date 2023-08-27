@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: komet, dnp-shuei-gothic-gin-std, sans-serif;
   color: #212529;
@@ -56,6 +60,18 @@ img {
   /*動き*/
   transition: all 0.3s;
   display: none;
+  padding-top: 100px;
+}
+
+.g-nav__box {
+  margin: 0 auto;
+  width: 200px;
+}
+.g-nav__box h2 {
+  color: #9aa4af;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
@@ -65,27 +81,11 @@ img {
   display: block;
 }
 
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list {
-  /*ナビの数が増えた場合縦スクロール*/
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100vh;
-  /*表示する高さ*/
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 /*ナビゲーション*/
 #g-nav ul {
   display: none;
-  /*ナビゲーション天地中央揃え*/
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-left: 20px;
+  border-left: 1px solid #212529;
 }
 
 #g-nav.panelactive ul {
@@ -93,19 +93,14 @@ img {
 }
 
 /*リストのレイアウト設定*/
-#g-nav li {
-  list-style: none;
-  text-align: center;
+#g-nav li:nth-child(1) {
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 #g-nav li a {
   color: #333;
-  text-decoration: none;
-  padding: 10px;
   display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -151,35 +146,6 @@ img {
   left: 7px;
   transform: translateY(-6px) rotate(30deg);
   width: 80%;
-}
-
-/*========= swiperのためのCSS ===============*/
-.swiper {
-  width: 100%;
-  height: 600px;
-  z-index: -1;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #212529;
 }
 
 /*========= header ===============*/
@@ -317,7 +283,6 @@ section {
   margin-bottom: 50px;
 }
 .goodsItem__btn {
-  text-align: center;
   margin-bottom: 50px;
 }
 .goodsItem__btn a {
@@ -351,6 +316,52 @@ section {
 }
 .goodsItem__img__box .under {
   margin-top: 30px;
+}
+
+/*========= newItem ===============*/
+.swiper {
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+}
+
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.swiper-slide:nth-child(1) {
+  background-image: url(../img/new-01.jpg);
+}
+.swiper-slide:nth-child(2) {
+  background-image: url(../img/new-02.jpg);
+}
+.swiper-slide:nth-child(3) {
+  background-image: url(../img/new-03.jpg);
+}
+
+.swiper-pagination-bullet {
+  background-color: #f8f8f8;
+}
+
+.newItem {
+  color: #f8f8f8;
+}
+.newItem__box {
+  padding-top: 30px;
+}
+.newItem__box h3 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+.newItem__box h3 time {
+  font-size: 32px;
+}
+.newItem__btn {
+  margin-top: 10px;
+}
+.newItem__btn a {
+  color: #f8f8f8;
 }
 
 /*========= column ===============*/
@@ -509,5 +520,68 @@ section {
 }
 .latestNews__btn a:hover {
   opacity: 0.6;
+}
+
+/*========= latestNews ===============*/
+.footer {
+  background-color: #9aa4af;
+}
+.footer__container {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.footer__title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.footer__cap {
+  margin-bottom: 20px;
+}
+.footer__cap dl {
+  display: flex;
+  font-size: 14px;
+}
+.footer__cap dl dt {
+  width: 60px;
+}
+.footerItem {
+  margin-bottom: 20px;
+}
+.footerItem__title {
+  font-size: 18px;
+}
+.footerItem p {
+  font-size: 14px;
+}
+.footer .small__box {
+  text-align: center;
+}
+.footer .small__box small {
+  font-size: 12px;
+}
+.footer .flex {
+  justify-content: space-between;
+  align-items: end;
+}
+
+.topLink {
+  text-align: right;
+}
+.topLink a {
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  font-size: 16px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  border: 1px solid #212529;
+}
+.topLink a:hover {
+  background-color: #212529;
+  color: #9aa4af;
 }
 /*# sourceMappingURL=style.css.map */
