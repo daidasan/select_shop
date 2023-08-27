@@ -270,6 +270,8 @@ section {
   margin-bottom: 50px;
 }
 .about__btn {
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   font-size: 16px;
   display: inline-block;
   background-color: #f8f8f8;
@@ -314,11 +316,25 @@ section {
   margin-bottom: 50px;
 }
 .goodsItem__btn a {
-  display: inline-block;
-  padding: 5px 0;
-  border: 1px solid #212529;
-  font-size: 14px;
-  width: 250px;
+  padding-bottom: 7px;
+  position: relative;
+}
+.goodsItem__btn a::before {
+  background: #9aa4af;
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.goodsItem__btn a:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
 }
 .goodsItem__img__box {
   display: flex;
@@ -356,24 +372,26 @@ section {
 }
 .column__btn {
   text-align: center;
-  padding-bottom: 5px;
+}
+.column__btn a {
+  padding-bottom: 7px;
   position: relative;
 }
-.column__btn::before {
-  background: #212529;
+.column__btn a::before {
+  background: #9aa4af;
   content: "";
   width: 100%;
-  height: 2px;
+  height: 3px;
   position: absolute;
   left: 0;
   bottom: 0;
   margin: auto;
-  transform-origin: right top;
+  transform-origin: center top;
   transform: scale(0, 1);
   transition: transform 0.3s;
 }
-.column__btnhover::before {
-  transform-origin: left top;
+.column__btn a:hover::before {
+  transform-origin: center top;
   transform: scale(1, 1);
 }
 
@@ -390,6 +408,27 @@ section {
 }
 .inst__btn {
   text-align: center;
+}
+.inst__btn a {
+  padding-bottom: 7px;
+  position: relative;
+}
+.inst__btn a::before {
+  background: #9aa4af;
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.inst__btn a:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
 }
 
 .slideshow__wrap {
