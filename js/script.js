@@ -31,13 +31,3 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 
-  const roop = new roop(".swiper", {
-    speed: 10000,　//スライドの切り替え時間
-    slidesPerView: 2,　//一度に表示するスライド枚数
-    loop: true, //繰り返し
-    centeredSlides: true, //アクティブなスライドをスライダーの中心に
-    preventInteractionOnTransition: true, //クリックなどをしてもスライダーの停止を防ぐ
-    autoplay: {
-      delay: 0, //0にすることで流れ続けます。
-    },
-  });
