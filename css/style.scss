@@ -84,16 +84,18 @@ img {
     display: none;
     padding-top: 100px;
 }
-    .g-nav__box {
-        margin: 0 auto;
-        width: 200px;
-        & h2 {
-            color: $accent;
-            font-size: 32px;
-            line-height: 1.2;
-            margin-bottom: 30px;
-        }
+
+.g-nav__box {
+    margin: 0 auto;
+    width: 200px;
+
+    & h2 {
+        color: $accent;
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 30px;
     }
+}
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
 #g-nav.panelactive {
@@ -101,6 +103,7 @@ img {
     z-index: 999;
     display: block;
 }
+
 /*ナビゲーション*/
 #g-nav ul {
     display: none;
@@ -115,11 +118,16 @@ img {
 /*リストのレイアウト設定*/
 
 #g-nav li {
-    
-    &:nth-child(1){
+
+    &:nth-child(1) {
         font-weight: 600;
         margin-bottom: 20px;
     }
+}
+
+.pl10 {
+    display: inline-block;
+    padding-left: 10px;
 }
 
 #g-nav li a {
@@ -129,13 +137,10 @@ img {
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
-    position: fixed;
+    position: relative;
     z-index: 9999;
-    /*ボタンを最前面に*/
-    top: 10px;
-    right: 8vw;
     cursor: pointer;
-    width: 50px;
+    width: 40px;
     height: 50px;
     // position: relative;
 }
@@ -145,33 +150,29 @@ img {
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 5px;
     height: 2px;
-    // border-radius: 2px;
     background-color: $black-color;
-    width: 80%;
+    width: 100%;
 }
 
 .openbtn span:nth-of-type(1) {
-    top: 15px;
+    top: 18px;
 }
 
 .openbtn span:nth-of-type(2) {
-    top: 31px;
+    top: 30px;
 }
 
 .openbtn.active span:nth-of-type(1) {
-    top: 18px;
-    left: 7px;
+    top: 19px;
     transform: translateY(6px) rotate(-30deg);
-    width: 80%;
+    width: 100%;
 }
 
 .openbtn.active span:nth-of-type(2) {
-    top: 30px;
-    left: 7px;
+    top: 31px;
     transform: translateY(-6px) rotate(30deg);
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -188,6 +189,13 @@ img {
     justify-content: space-between;
     background-color: $white-color;
     z-index: 999;
+
+    @include pc {
+        padding: 0;
+        max-width: 1000px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     & h1 {
         font-size: 24px;
@@ -208,7 +216,8 @@ img {
         @include pc {
             display: block;
             font-size: 18px;
-            margin-right: 5px;
+            margin-right: 10px;
+            z-index: 10000;
         }
     }
 }
@@ -219,6 +228,9 @@ img {
     // margin: 100px 0 100px 0;
     position: relative;
     margin-top: 70px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
 
     &__Text {
@@ -231,19 +243,32 @@ img {
         margin-bottom: 10px;
         color: $white-color;
 
+        @include pc {
+            padding: 0;
+            font-size: 32px;
+            color: $black-color;
+            margin-top: 100px;
+        }
+
         & p {
             margin-bottom: 10px;
         }
     }
 
     &__img {
-        margin-left: auto;
         z-index: -1;
+        text-align: right;
+
 
         & img {
             width: 100vw;
             height: 80vh;
             object-fit: cover;
+
+            @include pc {
+                width: 600px;
+                height: 600px;
+            }
         }
 
 

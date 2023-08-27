@@ -98,6 +98,11 @@ img {
   margin-bottom: 20px;
 }
 
+.pl10 {
+  display: inline-block;
+  padding-left: 10px;
+}
+
 #g-nav li a {
   color: #333;
   display: block;
@@ -105,13 +110,10 @@ img {
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
-  position: fixed;
+  position: relative;
   z-index: 9999;
-  /*ボタンを最前面に*/
-  top: 10px;
-  right: 8vw;
   cursor: pointer;
-  width: 50px;
+  width: 40px;
   height: 50px;
 }
 
@@ -120,32 +122,29 @@ img {
   display: inline-block;
   transition: all 0.4s;
   position: absolute;
-  left: 5px;
   height: 2px;
   background-color: #212529;
-  width: 80%;
+  width: 100%;
 }
 
 .openbtn span:nth-of-type(1) {
-  top: 15px;
+  top: 18px;
 }
 
 .openbtn span:nth-of-type(2) {
-  top: 31px;
+  top: 30px;
 }
 
 .openbtn.active span:nth-of-type(1) {
-  top: 18px;
-  left: 7px;
+  top: 19px;
   transform: translateY(6px) rotate(-30deg);
-  width: 80%;
+  width: 100%;
 }
 
 .openbtn.active span:nth-of-type(2) {
-  top: 30px;
-  left: 7px;
+  top: 31px;
   transform: translateY(-6px) rotate(30deg);
-  width: 80%;
+  width: 100%;
 }
 
 /*========= header ===============*/
@@ -160,6 +159,14 @@ img {
   justify-content: space-between;
   background-color: #f8f8f8;
   z-index: 999;
+}
+@media (min-width: 769px) {
+  .gnav__fix__box {
+    padding: 0;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .gnav__fix__box h1 {
   font-size: 24px;
@@ -178,7 +185,8 @@ img {
   .openbtn-box p {
     display: block;
     font-size: 18px;
-    margin-right: 5px;
+    margin-right: 10px;
+    z-index: 10000;
   }
 }
 
@@ -186,6 +194,9 @@ img {
 .top {
   position: relative;
   margin-top: 70px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .top__Text {
   position: absolute;
@@ -197,18 +208,32 @@ img {
   margin-bottom: 10px;
   color: #f8f8f8;
 }
+@media (min-width: 769px) {
+  .top__Text {
+    padding: 0;
+    font-size: 32px;
+    color: #212529;
+    margin-top: 100px;
+  }
+}
 .top__Text p {
   margin-bottom: 10px;
 }
 .top__img {
-  margin-left: auto;
   z-index: -1;
+  text-align: right;
 }
 .top__img img {
   width: 100vw;
   height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 769px) {
+  .top__img img {
+    width: 600px;
+    height: 600px;
+  }
 }
 
 /*========= section ===============*/
