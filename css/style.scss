@@ -364,6 +364,7 @@ section {
         @include pc {
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
             width: 100%;
         }
 
@@ -436,9 +437,10 @@ section {
         &__img__box {
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
 
             @include pc {
-                width: 62%;
+                width: 620px;
             }
 
             & img {
@@ -446,7 +448,7 @@ section {
                 height: 100%;
 
                 @include pc {
-                    max-width: 300px;
+                    width:300px;
                 }
             }
 
