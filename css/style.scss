@@ -195,10 +195,15 @@ img {
         max-width: 1000px;
         left: 50%;
         transform: translateX(-50%);
+        height: 80px;
     }
 
     & h1 {
         font-size: 24px;
+
+        @include pc {
+            font-size: 32px;
+        }
     }
 }
 
@@ -231,38 +236,78 @@ img {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
+
+    @include pc {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
 
 
     &__Text {
         position: absolute;
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 40px;
+        font-size: 18px;
+        margin-top: 30px;
         padding-left: 8vw;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        color: $white-color;
+
 
         @include pc {
             padding: 0;
-            font-size: 32px;
-            color: $black-color;
-            margin-top: 100px;
+            font-size: 21px;
+            margin-left: 50px;
+            margin-top: 150px;
         }
 
         & p {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            color: $accent;
+
+            @include pc {
+                // text-align: right;
+                margin-bottom: 10px;
+            }
         }
+    }
+
+    &__catch {
+        font-size: 14px;
+        // letter-spacing: 0;
+        text-align: center;
+        margin-top: 50px;
+        padding: 0 8vw;
+
+        @include pc {
+            font-size: 16px;
+        }
+
+        & p {
+            &::before {
+                content: "";
+                background-image: url(../img/top-check.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+
     }
 
     &__img {
         z-index: -1;
         text-align: right;
 
+        @include pc {
+            text-align: center;
+        }
+
 
         & img {
-            width: 100vw;
-            height: 80vh;
+            width: 80vw;
+            height: 60vh;
             object-fit: cover;
 
             @include pc {
@@ -292,6 +337,10 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 0;
+
+    @include pc{
+        padding: 120px 0;
+    }
 
     &__cap__box {
         padding: 0 8vw;
@@ -354,6 +403,14 @@ section {
     &Item {
         margin-bottom: 80px;
 
+        @include pc {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
         &__text__box {
 
             @include pc {
@@ -361,22 +418,15 @@ section {
             }
         }
 
-        @include pc {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-        }
-
         &__title {
             font-size: 36px;
             margin-bottom: 30px;
             line-height: 1.2;
 
-            @include pc{
+            @include pc {
                 font-size: 48px;
 
-                & br{
+                & br {
                     display: none;
                 }
             }
@@ -389,7 +439,7 @@ section {
                 font-weight: 600;
                 margin-bottom: 10px;
 
-                @include pc{
+                @include pc {
                     font-size: 24px;
                 }
             }
@@ -398,14 +448,13 @@ section {
                 font-size: 14px;
                 margin-bottom: 50px;
 
-                @include pc{
+                @include pc {
                     font-size: 16px;
                 }
             }
         }
 
         &__btn {
-            // text-align: center;
             margin-bottom: 50px;
 
             & a {
@@ -417,7 +466,6 @@ section {
                     content: '';
                     width: 100%;
                     height: 3px;
-                    // border-radius: 3px;
                     position: absolute;
                     left: 0;
                     bottom: 0;
@@ -440,7 +488,7 @@ section {
             align-items: flex-start;
 
             @include pc {
-                width: 620px;
+                width: 60%;
             }
 
             & img {
@@ -448,18 +496,24 @@ section {
                 height: 100%;
 
                 @include pc {
-                    width:300px;
+                    width: 48%;
                 }
             }
 
             & .under {
                 margin-top: 30px;
 
-                @include pc{
+                @include pc {
                     margin-top: 50px;
                 }
             }
         }
+    }
+}
+
+.flex__reverse {
+    @include pc {
+        flex-direction: row-reverse;
     }
 }
 
@@ -537,7 +591,7 @@ section {
         padding: 50px 8vw;
         border: 2px solid $accent;
 
-        @include pc{
+        @include pc {
             padding: 50px 70px;
         }
 
@@ -552,7 +606,7 @@ section {
 
     &Item {
 
-        @include pc{
+        @include pc {
             display: flex;
             justify-content: space-between;
         }
@@ -560,7 +614,7 @@ section {
         &__box {
             margin-bottom: 50px;
 
-            @include pc{
+            @include pc {
                 width: 30%;
             }
 
@@ -692,12 +746,32 @@ section {
         border-top: 2px solid $accent;
         border-bottom: 2px solid $accent;
         padding: 10px;
+
+        @include pc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__flex {
+        @include pc {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__title {
         font-size: 21px;
         color: $accent;
         margin-bottom: 10px;
+
+        @include pc {
+            margin-bottom: 0;
+            padding-right: 30px;
+            margin-right: 30px;
+            border-right: 1px solid $accent;
+        }
     }
 
     &__list__link {
@@ -709,8 +783,17 @@ section {
             font-size: 14px;
             margin-bottom: 20px;
 
+            @include pc {
+                display: flex;
+                margin-bottom: 0;
+            }
+
             & dt {
                 opacity: .6;
+
+                @include pc {
+                    margin-right: 20px;
+                }
             }
 
             & dd::after {
@@ -735,27 +818,53 @@ section {
 }
 
 
-/*========= latestNews ===============*/
+/*========= footer ===============*/
 .footer {
     background-color: $accent;
 
     &__container {
         padding-top: 50px;
         padding-bottom: 20px;
+
+        @include pc {
+            & .pc__flex {
+                display: flex;
+            }
+        }
     }
 
     &__title {
         font-size: 28px;
         line-height: 1.2;
         margin-bottom: 20px;
+
+        @include pc {
+            font-size: 42px;
+        }
+
+        & br {
+            display: none;
+
+            @include pc {
+                display: block;
+            }
+        }
     }
 
     &__cap {
         margin-bottom: 20px;
 
+        @include pc {
+            margin-right: 80px;
+        }
+
         & dl {
             display: flex;
             font-size: 14px;
+
+            @include pc {
+                font-size: 16px;
+            }
 
             & dt {
                 width: 60px;
@@ -768,10 +877,18 @@ section {
 
         &__title {
             font-size: 18px;
+
+            @include pc {
+                font-size: 24px;
+            }
         }
 
         & p {
             font-size: 14px;
+
+            @include pc {
+                font-size: 16px;
+            }
         }
     }
 
