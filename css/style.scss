@@ -48,13 +48,13 @@ img {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 8vw;
 
     @include pc {
-        padding: 0;
+        padding: 0 50px;
     }
 }
 
@@ -87,13 +87,26 @@ img {
 
 .g-nav__box {
     margin: 0 auto;
-    width: 200px;
+    width: 230px;
+
+    @include pc {
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
 
     & h2 {
         color: $accent;
         font-size: 32px;
         line-height: 1.2;
         margin-bottom: 30px;
+
+        @include pc {
+            font-size: 42px;
+            letter-spacing: .07em;
+            line-height: 1.5;
+        }
     }
 }
 
@@ -109,6 +122,10 @@ img {
     display: none;
     padding-left: 20px;
     border-left: 1px solid $black-color;
+
+    @include pc {
+        padding-left: 50px;
+    }
 }
 
 #g-nav.panelactive ul {
@@ -119,20 +136,30 @@ img {
 
 #g-nav li {
 
+    font-size: 18px;
+    padding-bottom: 10px;
+
+    @include pc {
+        font-size: 21px;
+    }
+
     &:nth-child(1) {
         font-weight: 600;
         margin-bottom: 20px;
     }
 }
 
-.pl10 {
-    display: inline-block;
-    padding-left: 10px;
+.pl20 {
+    padding-left: 20px;
 }
 
 #g-nav li a {
-    color: #333;
+    color: $black-color;
     display: block;
+
+    &:hover {
+        color: $accent;
+    }
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -178,24 +205,31 @@ img {
 
 
 /*========= header ===============*/
+.gnav__bgc {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: $white-color;
+    width: 100%;
+
+}
+
 .gnav__fix__box {
     padding: 0 8vw;
     height: 70px;
     width: 100%;
-    position: fixed;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: $white-color;
-    z-index: 999;
 
     @include pc {
         padding: 0;
         max-width: 1000px;
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
         height: 80px;
+        margin: 0 auto;
     }
 
     & h1 {
@@ -338,7 +372,7 @@ section {
     background-size: cover;
     padding: 80px 0;
 
-    @include pc{
+    @include pc {
         padding: 120px 0;
     }
 
@@ -398,6 +432,12 @@ section {
         width: 100%;
         padding: 20px;
         border: 2px solid $black-color;
+
+        @include pc {
+            font-size: 32px;
+            margin-bottom: 80px;
+            padding: 30px;
+        }
     }
 
     &Item {
@@ -424,7 +464,8 @@ section {
             line-height: 1.2;
 
             @include pc {
-                font-size: 48px;
+                font-size: 42px;
+                margin-bottom: 40px;
 
                 & br {
                     display: none;
@@ -440,7 +481,8 @@ section {
                 margin-bottom: 10px;
 
                 @include pc {
-                    font-size: 24px;
+                    font-size: 21px;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -470,13 +512,13 @@ section {
                     left: 0;
                     bottom: 0;
                     margin: auto;
-                    transform-origin: center top;
+                    transform-origin: left top;
                     transform: scale(0, 1);
                     transition: transform .3s;
                 }
 
                 &:hover::before {
-                    transform-origin: center top;
+                    transform-origin: left top;
                     transform: scale(1, 1);
                 }
             }
@@ -538,11 +580,11 @@ section {
     }
 
     &:nth-child(2) {
-        background-image: url(../img/new-02.jpg);
+        background-image: url(../img/new-03.jpg);
     }
 
     &:nth-child(3) {
-        background-image: url(../img/new-03.jpg);
+        background-image: url(../img/new-02.jpg);
     }
 }
 
@@ -564,17 +606,26 @@ section {
             font-size: 42px;
             line-height: 1.2;
 
+            @include pc {
+                font-size: 60px;
+            }
+
             & time {
                 font-size: 32px;
             }
         }
     }
 
-    &__btn {
+    &__text {
         margin-top: 10px;
 
-        & a {
+        & p {
             color: $white-color;
+            font-size: 18px;
+
+            @include pc {
+                font-size: 21px;
+            }
         }
     }
 }

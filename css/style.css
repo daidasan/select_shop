@@ -29,14 +29,14 @@ img {
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 8vw;
 }
 @media (min-width: 769px) {
   .wrapper {
-    padding: 0;
+    padding: 0 50px;
   }
 }
 
@@ -65,13 +65,28 @@ img {
 
 .g-nav__box {
   margin: 0 auto;
-  width: 200px;
+  width: 230px;
+}
+@media (min-width: 769px) {
+  .g-nav__box {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
 }
 .g-nav__box h2 {
   color: #9aa4af;
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 30px;
+}
+@media (min-width: 769px) {
+  .g-nav__box h2 {
+    font-size: 42px;
+    letter-spacing: 0.07em;
+    line-height: 1.5;
+  }
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
@@ -87,25 +102,41 @@ img {
   padding-left: 20px;
   border-left: 1px solid #212529;
 }
+@media (min-width: 769px) {
+  #g-nav ul {
+    padding-left: 50px;
+  }
+}
 
 #g-nav.panelactive ul {
   display: block;
 }
 
 /*リストのレイアウト設定*/
+#g-nav li {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+@media (min-width: 769px) {
+  #g-nav li {
+    font-size: 21px;
+  }
+}
 #g-nav li:nth-child(1) {
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.pl10 {
-  display: inline-block;
-  padding-left: 10px;
+.pl20 {
+  padding-left: 20px;
 }
 
 #g-nav li a {
-  color: #333;
+  color: #212529;
   display: block;
+}
+#g-nav li a:hover {
+  color: #9aa4af;
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -148,25 +179,29 @@ img {
 }
 
 /*========= header ===============*/
+.gnav__bgc {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
 .gnav__fix__box {
   padding: 0 8vw;
   height: 70px;
   width: 100%;
-  position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #f8f8f8;
-  z-index: 999;
 }
 @media (min-width: 769px) {
   .gnav__fix__box {
     padding: 0;
     max-width: 1000px;
-    left: 50%;
-    transform: translateX(-50%);
     height: 80px;
+    margin: 0 auto;
   }
 }
 .gnav__fix__box h1 {
@@ -337,6 +372,13 @@ section {
   padding: 20px;
   border: 2px solid #212529;
 }
+@media (min-width: 769px) {
+  .goods__title {
+    font-size: 32px;
+    margin-bottom: 80px;
+    padding: 30px;
+  }
+}
 .goodsItem {
   margin-bottom: 80px;
 }
@@ -361,7 +403,8 @@ section {
 }
 @media (min-width: 769px) {
   .goodsItem__title {
-    font-size: 48px;
+    font-size: 42px;
+    margin-bottom: 40px;
   }
   .goodsItem__title br {
     display: none;
@@ -374,7 +417,8 @@ section {
 }
 @media (min-width: 769px) {
   .goodsItem__cap dt {
-    font-size: 24px;
+    font-size: 21px;
+    margin-bottom: 20px;
   }
 }
 .goodsItem__cap dd {
@@ -402,12 +446,12 @@ section {
   left: 0;
   bottom: 0;
   margin: auto;
-  transform-origin: center top;
+  transform-origin: left top;
   transform: scale(0, 1);
   transition: transform 0.3s;
 }
 .goodsItem__btn a:hover::before {
-  transform-origin: center top;
+  transform-origin: left top;
   transform: scale(1, 1);
 }
 .goodsItem__img__box {
@@ -460,10 +504,10 @@ section {
   background-image: url(../img/new-01.jpg);
 }
 .swiper-slide:nth-child(2) {
-  background-image: url(../img/new-02.jpg);
+  background-image: url(../img/new-03.jpg);
 }
 .swiper-slide:nth-child(3) {
-  background-image: url(../img/new-03.jpg);
+  background-image: url(../img/new-02.jpg);
 }
 
 .swiper-pagination-bullet {
@@ -480,14 +524,25 @@ section {
   font-size: 42px;
   line-height: 1.2;
 }
+@media (min-width: 769px) {
+  .newItem__box h3 {
+    font-size: 60px;
+  }
+}
 .newItem__box h3 time {
   font-size: 32px;
 }
-.newItem__btn {
+.newItem__text {
   margin-top: 10px;
 }
-.newItem__btn a {
+.newItem__text p {
   color: #f8f8f8;
+  font-size: 18px;
+}
+@media (min-width: 769px) {
+  .newItem__text p {
+    font-size: 21px;
+  }
 }
 
 /*========= column ===============*/
